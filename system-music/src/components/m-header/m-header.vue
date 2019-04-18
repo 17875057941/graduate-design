@@ -1,6 +1,6 @@
 <template>
   <div class="m-header">
-    <div class="icon"></div>
+    <div class="icon" @click="logout"></div>
     <h1 class="text">Chicken Music</h1>
     <router-link tag="div" class="mine" to="/user">
       <i class="icon-mine"></i>
@@ -9,7 +9,18 @@
 </template>
 
 <script type="text/ecmascript-6">
-  export default {}
+  import {fetch} from 'common/js/fetch'
+  export default {
+    methods: {
+      logout() {
+        fetch('post', 'http://localhost:5000/logout').then(res => {
+          this.$router.push({
+            path: '/login'
+          })
+        })
+      }
+    }
+  }
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">

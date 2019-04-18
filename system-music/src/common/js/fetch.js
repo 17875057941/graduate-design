@@ -1,5 +1,5 @@
 import axios from 'axios'
-
+axios.defaults.withCredentials = true
 export function fetch(method, url, params) {
   if (method === 'get' || method === 'GET') {
     return new Promise((resolve, reject) => {

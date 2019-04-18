@@ -33,7 +33,6 @@
   import {createSong} from 'common/js/song'
   import {mapMutations, mapActions} from 'vuex'
   import Singer from 'common/js/singer'
-
   const TYPE_SINGER = 'singer'
   const perpage = 20
 
@@ -61,7 +60,7 @@
       refresh() {
         this.$refs.suggest.refresh()
       },
-      search() {
+      search(query) {
         this.page = 1
         this.hasMore = true
         this.$refs.suggest.scrollTo(0, 0)
@@ -118,7 +117,7 @@
       },
       _genResult(data) {
         let ret = []
-        console.log(data)
+        console.log(data, 'ppp')
         if (data.zhida && data.zhida.singerid) {
           ret.push({...data.zhida, ...{type: TYPE_SINGER}})
         }
@@ -129,8 +128,10 @@
       },
       _normalizeSongs(list) {
         let ret = []
-        list.forEach((musicData) => {
-          if (musicData.songid && musicData.albummid) {
+        list.forEach((item) => {
+          let musicData = item.musicData
+          if (musicData.songid && musicData.albumname) {
+            console.log('p0')
             ret.push(createSong(musicData))
           }
         })

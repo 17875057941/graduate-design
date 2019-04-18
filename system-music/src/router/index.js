@@ -51,55 +51,106 @@ const UserCenter = (resolve) => {
   })
 }
 
+const Home = (resolve) => {
+  import('components/home/home').then((module) => {
+    resolve(module)
+  })
+}
+
+const Index = (resolve) => {
+  import('components/index/index').then((module) => {
+    resolve(module)
+  })
+}
+
+const Login = (resolve) => {
+  import('components/login/login').then((module) => {
+    resolve(module)
+  })
+}
+
+const Register = (resolve) => {
+  import('components/register/register').then((module) => {
+    resolve(module)
+  })
+}
+
+const Hobby = (resolve) => {
+  import('components/hobby/hobby').then((module) => {
+    resolve(module)
+  })
+}
 export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/recommend'
+      redirect: '/home'
     },
     {
-      path: '/recommend',
-      component: Recommend,
+      path: '/home',
+      component: Home
+    },
+    {
+      path: '/login',
+      component: Login
+    },
+    {
+      path: '/register',
+      component: Register
+    },
+    {
+      path: '/index',
+      component: Index,
       children: [
         {
-          path: ':id',
-          component: Disc
+          path: '/recommend',
+          component: Recommend,
+          children: [
+            {
+              path: ':id',
+              component: Disc
+            }
+          ]
+        },
+        {
+          path: '/singer',
+          component: Singer,
+          children: [
+            {
+              path: ':id',
+              component: SingerDetail
+            }
+          ]
+        },
+        {
+          path: '/rank',
+          component: Rank,
+          children: [
+            {
+              path: ':id',
+              component: TopList
+            }
+          ]
+        },
+        {
+          path: '/search',
+          component: Search,
+          children: [
+            {
+              path: ':id',
+              component: SingerDetail
+            }
+          ]
+        },
+        {
+          path: '/user',
+          component: UserCenter
         }
       ]
     },
     {
-      path: '/singer',
-      component: Singer,
-      children: [
-        {
-          path: ':id',
-          component: SingerDetail
-        }
-      ]
-    },
-    {
-      path: '/rank',
-      component: Rank,
-      children: [
-        {
-          path: ':id',
-          component: TopList
-        }
-      ]
-    },
-    {
-      path: '/search',
-      component: Search,
-      children: [
-        {
-          path: ':id',
-          component: SingerDetail
-        }
-      ]
-    },
-    {
-      path: '/user',
-      component: UserCenter
+      path: '/hobby',
+      component: Hobby
     }
   ]
 })

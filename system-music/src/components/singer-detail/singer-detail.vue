@@ -45,7 +45,6 @@
         list.forEach((item) => {
           let {musicData} = item
           if (musicData.songid && musicData.albumname) {
-            console.log(9)
             ret.push(createSong(musicData))
           }
         })

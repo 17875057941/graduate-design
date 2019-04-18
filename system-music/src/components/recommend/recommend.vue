@@ -19,7 +19,6 @@
       historyList.forEach(item => {
         this.playHistoryIdList.push(item.id)
       })
-      console.log(this.playHistoryIdList)
     },
     mounted() {
       this.getRecommendMusic()
