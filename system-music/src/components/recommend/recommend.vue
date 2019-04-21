@@ -1,5 +1,5 @@
 <template>
-  <music-list :songs="songs"></music-list>
+  <music-list :songs="songs" :bg-image="bgImage"></music-list>
 </template>
 
 <script type="text/ecmascript-6">
@@ -11,7 +11,8 @@
     data() {
       return {
         playHistoryIdList: [],
-        songs: []
+        songs: [],
+        bgImage: require('../../common/image/tuijuan.jpg')
       }
     },
     created() {
@@ -25,7 +26,7 @@
     },
     methods: {
       getRecommendMusic() {
-        fetch('post', 'http://localhost:5000/recommend', this.playHistoryIdList).then(res => {
+        fetch('post', 'recommend', this.playHistoryIdList).then(res => {
           this.songs = this._normalizeSongs(res.data.list)
           console.log(res.data.list)
         })

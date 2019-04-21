@@ -1,9 +1,10 @@
 import axios from 'axios'
 axios.defaults.withCredentials = true
 export function fetch(method, url, params) {
+  let realUrl = 'http://192.168.31.100:5000/' + url
   if (method === 'get' || method === 'GET') {
     return new Promise((resolve, reject) => {
-      axios.get(url, {
+      axios.get(realUrl, {
         params: params
       }).then(res => {
         resolve(res)
@@ -13,7 +14,7 @@ export function fetch(method, url, params) {
     })
   } else {
     return new Promise((resolve, reject) => {
-      axios.post(url, params)
+      axios.post(realUrl, params)
         .then(res => {
           resolve(res)
         }, err => {

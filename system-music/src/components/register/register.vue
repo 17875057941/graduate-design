@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="register">
     <div class="register" v-show="false">
       <x-header>注册</x-header>
       <group>
@@ -17,8 +17,11 @@
         <input type="text" title="用户名：" v-model="username" placeholder="请输入用户名">
         <input type="password" title="密码：" v-model="password" placeholder="请输入密码">
         <input type="password" title="确认密码：" v-model="repassword" placeholder="请确认密码">
-        <button @click.native="register" type="primary">立即注册</button>
+        <button @click="register" type="primary">立即注册</button>
         <div class="error"><span>+</span></div>
+      </div>
+      <div class="connect">
+        <p style="width: 100%;"><router-link class="facebook" to="/login">去登陆</router-link></p>
       </div>
     </div>
   </div>
@@ -44,7 +47,7 @@
     },
     methods: {
       register() {
-        fetch('post', 'http://localhost:5000/register', this.$data).then(res => {
+        fetch('post', 'register', this.$data).then(res => {
           if (res.data.code === 0) {
             this.$data.message = '密码不一致'
           } else if (res.data.code === 1) {
@@ -55,6 +58,10 @@
           } else if (res.data.code === 5) {
             this.$data.message = '用户名或密码不能为空'
           }
+          this.$vux.toast.show({
+            text: this.$data.message,
+            type: 'text'
+          })
         })
       }
     }
@@ -70,6 +77,16 @@
     color: #fff;
   }
 
+  .register {
+    width: 100%;
+    position: fixed;
+    top: -15px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("../../common/image/1.jpg") no-repeat;
+    background-size: cover;
+  }
   .page-container {
       margin: 120px auto 0 auto;
   }
@@ -224,9 +241,10 @@
 
   .connect a {
     display: inline-block;
-    width: 32px;
+    // width: 32px;
     height: 35px;
     margin-top: 15px;
+    font-size: 16px;
     -o-transition: all .2s;
     -moz-transition: all .2s;
     -webkit-transition: all .2s;

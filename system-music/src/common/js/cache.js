@@ -66,6 +66,11 @@ export function savePlay(song) {
   return songs
 }
 
+export function clearPlay() {
+  storage.remove(SEARCH_KEY)
+  return []
+}
+
 export function loadPlay() {
   return storage.get(PLAY_KEY, [])
 }

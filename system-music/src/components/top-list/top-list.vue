@@ -6,10 +6,9 @@
 
 <script type="text/ecmascript-6">
   import MusicList from 'components/music-list/music-list'
-  import {getMusicList} from 'api/rank'
-  import {ERR_OK} from 'api/config'
   import {mapGetters} from 'vuex'
   import {createSong} from 'common/js/song'
+  import {fetch} from 'common/js/fetch'
 
   export default {
     computed: {
@@ -37,20 +36,18 @@
     },
     methods: {
       _getMusicList() {
-        if (!this.topList.id) {
+        if (!this.topList.listName) {
           this.$router.push('/rank')
           return
         }
-        getMusicList(this.topList.id).then((res) => {
-          if (res.code === ERR_OK) {
-            this.songs = this._normalizeSongs(res.songlist)
-          }
+        fetch('post', 'getRankList', {listName: this.topList.listName}).then(res => {
+          this.songs = this._normalizeSongs(res.data.song.list)
         })
       },
       _normalizeSongs(list) {
         let ret = []
         list.forEach((item) => {
-          const musicData = item.data
+          const musicData = item.musicData
           if (musicData.songid && musicData.albumname) {
             ret.push(createSong(musicData))
           }

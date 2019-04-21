@@ -16,7 +16,7 @@ export default class Song {
       return Promise.resolve(this.lyric)
     }
     return new Promise((resolve, reject) => {
-      fetch('get', `http://localhost:5000/lyric/${this.id}`).then(res => {
+      fetch('get', `lyric/${this.id}`).then(res => {
         this.lyric = res.data.lyric
         resolve(this.lyric)
       })

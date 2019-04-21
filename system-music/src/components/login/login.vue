@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="login">
     <div class="login" v-show="false">
       <x-header>登陆</x-header>
       <group>
@@ -19,6 +19,9 @@
         <button @click="login" type="primary">马上登陆</button>
         <div class="error"><span>+</span></div>
       </div>
+    </div>
+    <div class="connect">
+      <p style=""><router-link class="facebook" to="/register">去注册</router-link></p>
     </div>
   </div>
   
@@ -43,7 +46,7 @@
     },
     methods: {
       login() {
-        fetch('post', 'http://localhost:5000/login', this.$data).then(res => {
+        fetch('post', 'login', this.$data).then(res => {
           if (res.data.code === 3) {
             this.$data.message = '密码错误'
           } else if (res.data.code === 4) {
@@ -57,8 +60,12 @@
             this.$data.message = '该用户尚未注册'
           } else {
             this.$data.message = ''
-            this.$router.push({path: '/index'})
+            this.$router.push({path: '/singer'})
           }
+          this.$vux.toast.show({
+            text: this.$data.message,
+            type: 'text'
+          })
         })
       }
     }
@@ -66,16 +73,26 @@
 </script>
 
 <style lang="stylus" scoped>
-  @import url("~common/css/reset.css")
   body {
     background: #f8f8f8;
     font-family: 'PT Sans', Helvetica, Arial, sans-serif;
     text-align: center;
     color: #fff;
+    background-color: red;
+    background: url("../../common/image/cover.jpg") no-repeat;
   }
-
   .page-container {
-      margin: 120px auto 0 auto;
+    margin: 120px auto 0 auto;
+  }
+  .login {
+    width: 100%;
+    position: fixed;
+    top: -15px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("../../common/image/1.jpg") no-repeat;
+    background-size: cover;
   }
 
   h1 {
@@ -228,9 +245,10 @@
 
   .connect a {
     display: inline-block;
-    width: 32px;
+    // width: 32px;
     height: 35px;
     margin-top: 15px;
+    font-size: 16px;
     -o-transition: all .2s;
     -moz-transition: all .2s;
     -webkit-transition: all .2s;

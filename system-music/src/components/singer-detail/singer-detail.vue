@@ -36,7 +36,7 @@
           this.$router.push('/singer')
           return
         }
-        fetch('get', `http://localhost:5000/singer/${this.singer.id}`).then(res => {
+        fetch('get', `singer/${this.singer.id}`).then(res => {
           this.songs = this._normalizeSongs(res.data.list)
         })
       },

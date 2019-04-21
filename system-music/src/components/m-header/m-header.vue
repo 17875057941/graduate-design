@@ -13,7 +13,7 @@
   export default {
     methods: {
       logout() {
-        fetch('post', 'http://localhost:5000/logout').then(res => {
+        fetch('post', 'logout').then(res => {
           this.$router.push({
             path: '/login'
           })

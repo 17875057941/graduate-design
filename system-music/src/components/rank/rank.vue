@@ -25,11 +25,9 @@
 <script type="text/ecmascript-6">
   import Scroll from 'base/scroll/scroll'
   import Loading from 'base/loading/loading'
-  import {getTopList} from 'api/rank'
-  import {ERR_OK} from 'api/config'
   import {playlistMixin} from 'common/js/mixin'
   import {mapMutations} from 'vuex'
-
+  import {fetch} from 'common/js/fetch'
   export default {
     mixins: [playlistMixin],
     created() {
@@ -48,17 +46,20 @@
         this.$refs.toplist.refresh()
       },
       selectItem(item) {
+        console.log(item)
         this.$router.push({
-          path: `/rank/${item.id}`
+          path: `/rank/${item.listName}`,
+          query: {
+            listName: item.listName
+          }
         })
         this.setTopList(item)
       },
       _getTopList() {
-        getTopList().then((res) => {
-          if (res.code === ERR_OK) {
-            this.topList = res.data.topList
-            console.log(this.topList)
-          }
+        fetch('post', 'getAllRankList').then(res => {
+          console.log(res, 'test')
+          this.topList = res.data
+          console.log(this.topList, 'top')
         })
       },
       ...mapMutations({

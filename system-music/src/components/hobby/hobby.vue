@@ -5,16 +5,17 @@
       <p>为你推荐更多精彩内容</p>
     </div>
     <div class="btn-group">
-      <x-button
+      <button
         mini
         :class="item.isClicked ? 'btn-clicked': 'btn'"
         v-for="(item, index) in btnValue"
         :value="item.key"
-        @click.native="handleOnClick(item.isClicked,index)"
-      >{{item.value}}</x-button>
+        :key="index"
+        @click="handleOnClick(item.isClicked,index)"
+      >{{item.value}}</button>
     </div>
     <div class="submit">
-      <x-button mini @click.native="gotoIndex">选好了</x-button>
+      <button @click="gotoIndex">选好了</button>
     </div>
   </div>
 </template>
@@ -65,7 +66,10 @@
           }
         })
         let params = hobbyList.join(',')
-        fetch('post', 'http://localhost:5000/fixColdStart', {love: params}).then(res => {
+        fetch('post', '/fixColdStart', {love: params}).then(res => {
+        })
+        this.$router.push({
+          path: '/singer'
         })
       },
       handleOnClick (isClicked, index) {
@@ -81,12 +85,12 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: url("../../common/image/white-bg.jpg") no-repeat;
+    background: url("../../common/image/white-bg1.jpg") no-repeat;
     background-size: cover;
-    padding: 0 0.3rem;
+    padding: 0 1rem;
 
     .header {
-      margin-top: 1rem;
+      margin-top: 3rem;
       h1 {
         font-size: 40px;
         color: #000
@@ -97,12 +101,35 @@
       }
     }
     .btn-group {
+      margin-top: 30px;
       .btn {
-        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        border: none;
       }
       .btn-clicked {
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        border: none;
         background: gray;
-        border-radius: 50%;
+        opacity: 0.5;
+      }
+    }
+    .submit {
+      text-align: center;
+      margin-top: 40px;
+      button {
+        width: 200px;
+        height: 50px;
+        border: none;
+        background: darkgray;
+        border-radius: 25px;
       }
     }
   }

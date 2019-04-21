@@ -38,7 +38,7 @@
         this.setSinger(singer)
       },
       _getSingerList() {
-        fetch('get', 'http://localhost:5000/singer').then(res => {
+        fetch('get', 'singer').then(res => {
           this.singers = this._normalizeSinger(res.data.list)
         })
       },
