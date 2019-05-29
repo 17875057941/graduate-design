@@ -1,15 +1,411 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5cb21fa4-9f5e-4158-936c-e38b3b277a8e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/music-server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/music-server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/songVec.model" beforeDir="false" afterPath="$PROJECT_DIR$/base/songVec.model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/sql_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/sql_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/songVec.model" beforeDir="false" afterPath="$PROJECT_DIR$/model/songVec.model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../system-music/src/api/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/../system-music/src/api/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../system-music/src/common/js/fetch.js" beforeDir="false" afterPath="$PROJECT_DIR$/../system-music/src/common/js/fetch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../system-music/src/components/m-header/m-header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../system-music/src/components/m-header/m-header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../system-music/src/components/player/player.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../system-music/src/components/player/player.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../system-music/src/components/recommend/recommend.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../system-music/src/components/recommend/recommend.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../system-music/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../system-music/src/main.js" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/music_server$sql_api.coverage" NAME="sql_api Coverage Results" MODIFIED="1555159864551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/base" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/base/sql_api.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="190" lean-forward="true" selection-start-line="190" selection-end-line="190" />
+              <folding>
+                <element signature="e#14#28#0" expanded="true" />
+                <element signature="e#524#775#0" />
+                <element signature="e#850#1342#0" />
+                <element signature="e#1458#2228#0" />
+                <element signature="e#2671#5579#0" />
+                <element signature="e#5636#6348#0" />
+                <element signature="e#6411#7459#0" />
+                <element signature="e#7519#7634#0" />
+                <element signature="e#7702#7753#0" />
+                <element signature="e#7813#8842#0" />
+                <element signature="e#8937#9315#0" />
+                <element signature="e#9395#10284#0" />
+                <element signature="e#10360#12353#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/base/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="4" column="12" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/log.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="e#17#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>recommend</find>
+      <find>fetchall</find>
+      <find>LIMIT</find>
+      <find>musicData</find>
+      <find>int</find>
+      <find>where</find>
+      <find>INSERT</find>
+      <find>split</find>
+      <find>_internal</find>
+      <find>sys</find>
+      <find>userInfo</find>
+      <find>logpath</find>
+      <find>most_similar</find>
+      <find>song_id_list</find>
+      <find>picUrl</find>
+      <find>data</find>
+      <find>print</find>
+      <find>get_songId</find>
+      <find>in</find>
+      <find>love</find>
+      <find>192.168.31.100</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/common/config.xml" />
+        <option value="$PROJECT_DIR$/common/log.py" />
+        <option value="$PROJECT_DIR$/base/test.py" />
+        <option value="$PROJECT_DIR$/base/sql_api.py" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="99" />
-    <option name="y" value="62" />
+    <option name="x" value="53" />
+    <option name="y" value="32" />
     <option name="width" value="1345" />
     <option name="height" value="744" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="music-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="music-server" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="E:/推荐系统相关资料" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\music-recommend\graduate-design\music-server\base" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.sql_api">
+    <configuration name="sql_api" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="music-server" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/base" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/base/sql_api.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="music-server" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/base" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/base/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.sql_api" />
+        <item itemvalue="Python.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5cb21fa4-9f5e-4158-936c-e38b3b277a8e" name="Default Changelist" comment="" />
+      <created>1551796930764</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1551796930764</updated>
+      <workItem from="1551796932746" duration="502000" />
+      <workItem from="1552183288121" duration="314000" />
+      <workItem from="1553390971600" duration="4234000" />
+      <workItem from="1553521280903" duration="1312000" />
+      <workItem from="1553909912724" duration="4294000" />
+      <workItem from="1553945180309" duration="1290000" />
+      <workItem from="1554623632486" duration="4195000" />
+      <workItem from="1554724480716" duration="43000" />
+      <workItem from="1554732323657" duration="3518000" />
+      <workItem from="1554816872702" duration="5005000" />
+      <workItem from="1555159712861" duration="756000" />
+      <workItem from="1555330390243" duration="122000" />
+      <workItem from="1555590731362" duration="2094000" />
+      <workItem from="1555596915613" duration="4934000" />
+      <workItem from="1555673850626" duration="2421000" />
+      <workItem from="1555680507335" duration="6434000" />
+      <workItem from="1555726666876" duration="20003000" />
+      <workItem from="1555858367851" duration="661000" />
+      <workItem from="1555940997656" duration="1515000" />
+      <workItem from="1556030722798" duration="71000" />
+      <workItem from="1556786840485" duration="605000" />
+      <workItem from="1556812433675" duration="596000" />
+      <workItem from="1556850797367" duration="2454000" />
+      <workItem from="1556939990770" duration="93000" />
+      <workItem from="1556972839372" duration="2219000" />
+      <workItem from="1557019934375" duration="59000" />
+      <workItem from="1557045355784" duration="2397000" />
+      <workItem from="1558003182022" duration="3784000" />
+      <workItem from="1558924742239" duration="1067000" />
+      <workItem from="1559054310883" duration="771000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="77763000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22844176" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2590164" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3715221" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3276923" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/base/sql_api.py</url>
+          <line>75</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/music_server$sql_api.coverage" NAME="sql_api Coverage Results" MODIFIED="1559054476363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/base" />
+    <SUITE FILE_PATH="coverage/music_server$test.coverage" NAME="test Coverage Results" MODIFIED="1555684308546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/base" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/base/songVec.model">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="184">
+          <caret line="338" column="32" selection-start-line="338" selection-start-column="32" selection-end-line="338" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonLog">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="43" selection-start-column="39" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/sql_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="190" lean-forward="true" selection-start-line="190" selection-end-line="190" />
+          <folding>
+            <element signature="e#14#28#0" expanded="true" />
+            <element signature="e#524#775#0" />
+            <element signature="e#850#1342#0" />
+            <element signature="e#1458#2228#0" />
+            <element signature="e#2671#5579#0" />
+            <element signature="e#5636#6348#0" />
+            <element signature="e#6411#7459#0" />
+            <element signature="e#7519#7634#0" />
+            <element signature="e#7702#7753#0" />
+            <element signature="e#7813#8842#0" />
+            <element signature="e#8937#9315#0" />
+            <element signature="e#9395#10284#0" />
+            <element signature="e#10360#12353#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#17#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
