@@ -16,7 +16,7 @@ export function getHotKey() {
 export function search(query) {
   // const url = 'https://c.y.qq.com/soso/fcgi-bin/search_for_qq_cp'
   // const url = '/api/search'
-  const url = 'http://192.168.31.100:5000/search'
+  const url = 'http://localhost:5000/search'
   // const data = Object.assign({}, commonParams, {
   //   w: query,
   //   p: page,

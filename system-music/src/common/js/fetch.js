@@ -1,7 +1,7 @@
 import axios from 'axios'
 axios.defaults.withCredentials = true
 export function fetch(method, url, params) {
-  let realUrl = 'http://192.168.31.100:5000/' + url
+  let realUrl = 'http://localhost:5000/' + url
   if (method === 'get' || method === 'GET') {
     return new Promise((resolve, reject) => {
       axios.get(realUrl, {
